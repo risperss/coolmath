@@ -17,12 +17,12 @@ def primes(bound: int) -> list[int]:
 
 
 def load_primes(bound: int) -> list[int]:
-    result = []
+    result: list[int] = []
 
     with open("primes1.txt") as file:
         for line in file:
-            for prime in line.split():
-                prime = int(prime)
+            for num in line.split():
+                prime = int(num)
                 if prime > bound:
                     return result
                 result.append(prime)
